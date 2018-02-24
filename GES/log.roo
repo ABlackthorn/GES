@@ -1,0 +1,76 @@
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log opened at 2018-02-11 14:21:48
+project --topLevelPackage com.ges --projectName "GES" --java 8 --packaging JAR
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log closed at 2018-02-11 14:21:49
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log opened at 2018-02-11 14:21:51
+// [failed] script --file ges_script.txt
+// [failed] script --file ges_script.txt
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log closed at 2018-02-11 14:26:25
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2018-02-11 14:26:38
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2018-02-11 14:29:22
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log opened at 2018-02-11 14:29:45
+jpa setup --provider HIBERNATE --database MYSQL --databaseName ges --userName root --password 
+entity jpa --class ~.domain.profile --versionField ""
+field string --fieldName profile --notNull 
+entity jpa --class ~.domain.schoolYear --versionField ""
+field number --fieldName yearFrom --type int
+field number --fieldName yearTo --type int
+entity jpa --class ~.domain.schoolMonth --versionField ""
+field string --fieldName name --notNull 
+field boolean --fieldName paid --notNull 
+entity jpa --class ~.domain.subject --versionField ""
+field string --fieldName title --notNull 
+entity jpa --class ~.domain.gesUser --versionField ""
+field string --fieldName username --notNull 
+field string --fieldName password --notNull 
+field boolean --fieldName enabled --notNull 
+field list --fieldName profiles --type ~.domain.Profile
+entity jpa --class ~.domain.staff --versionField ""
+field reference --fieldName gesUser --type ~.domain.GesUser --notNull 
+field string --fieldName title --notNull 
+entity jpa --class ~.domain.grade --versionField ""
+field string --fieldName grade --notNull
+field list --fieldName subjects --type ~.domain.Subject
+entity jpa --class ~.domain.student --versionField ""
+field reference --fieldName gesUser --type ~.domain.GesUser --notNull
+field string --fieldName lastName
+field string --fieldName firstName
+field string --fieldName tel
+field reference --fieldName grade --type ~.domain.Grade
+field list --fieldName schoolMonths --type ~.domain.SchoolMonth
+entity jpa --class ~.domain.nonAttendance --versionField ""
+field reference --fieldName student --type ~.domain.Student
+field date --fieldName naDate --type java.util.Calendar
+field reference --fieldName subject --type ~.domain.Subject
+field boolean --fieldName justified
+field string --fieldName reason
+entity jpa --class ~.domain.notice --versionField ""
+field reference --fieldName student --type ~.domain.Student
+field date --fieldName noticeDate --type java.util.Calendar
+field string --fieldName notice
+entity jpa --class ~.domain.teacher --versionField ""
+field reference --fieldName gesUser --type ~.domain.GesUser --notNull
+field string --fieldName lastName
+field string --fieldName firstName
+field string --fieldName CIN
+field string --fieldName tel
+field list --fieldName subjects --type ~.domain.Subject
+field list --fieldName grades --type ~.domain.Grade
+field list --fieldName students --type ~.domain.Student
+entity jpa --class ~.domain.exam --versionField ""
+field reference --fieldName subject --type ~.domain.Subject
+field list --fieldName students --type ~.domain.Student
+field date --fieldName examDate --type java.util.Calendar
+field reference --fieldName grade --type ~.domain.Grade
+entity jpa --class ~.domain.mark --versionField ""
+field number --fieldName mark --type float
+field reference --fieldName student --type ~.domain.Student
+field reference --fieldName exam --type ~.domain.Exam
+web mvc setup
+security setup
+web mvc all --package ~.web
+// script --file C:\Users\SM\Desktop\ges_script.txt
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log closed at 2018-02-11 14:34:15
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log opened at 2018-02-24 13:40:17
+focus --class ~.domain.SchoolYear
+field boolean --fieldName active
+// Spring Roo 1.3.1.RELEASE [rev 8cb81a3] log closed at 2018-02-24 13:41:11

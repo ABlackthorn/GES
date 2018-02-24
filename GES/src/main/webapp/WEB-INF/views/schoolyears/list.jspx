@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_SchoolYear" items="${schoolyears}" z="+d177EtTFHnsYl3jv6xg+RhzNLY=">
+        <table:table data="${schoolyears}" id="l_com_ges_domain_SchoolYear" path="/schoolyears" z="DyWo98xWdeRGWLkQddh7WKs/59Q=">
+            <table:column id="c_com_ges_domain_SchoolYear_yearFrom" property="yearFrom" z="bCr9wc2N2eKjHNLUypKsAGsQEs4="/>
+            <table:column id="c_com_ges_domain_SchoolYear_yearTo" property="yearTo" z="y12BEZ5Mzo+a3BrTsfX9coS9+Cs="/>
+            <table:column id="c_com_ges_domain_SchoolYear_active" property="active" z="zaF1ZKMMXnfrAWG60zIsaYPw1x4="/>
+        </table:table>
+    </page:list>
+</div>

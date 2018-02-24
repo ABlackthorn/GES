@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_ges_domain_Notice" modelAttribute="notice" path="/notices" versionField="none" z="jdXnyCoiXeyVe2HDyQD0QIqOkk8=">
+        <field:select field="student" id="c_com_ges_domain_Notice_student" itemValue="id" items="${students}" path="/students" z="Wt4589MmHjWvncDBDuM8XGzAnVU="/>
+        <field:datetime dateTimePattern="${notice_noticedate_date_format}" field="noticeDate" id="c_com_ges_domain_Notice_noticeDate" z="GB1f6SgmPDWBUyYyWGyumys344s="/>
+        <field:input field="notice" id="c_com_ges_domain_Notice_notice" z="Q3lPRNJvcONmHrGnQwlpblFId0E="/>
+    </form:update>
+</div>

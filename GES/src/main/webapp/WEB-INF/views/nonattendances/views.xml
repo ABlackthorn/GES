@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="nonattendances/list">
+        <put-attribute name="body" value="/WEB-INF/views/nonattendances/list.jspx"/>
+    </definition>
+<definition extends="default" name="nonattendances/show">
+        <put-attribute name="body" value="/WEB-INF/views/nonattendances/show.jspx"/>
+    </definition>
+<definition extends="default" name="nonattendances/create">
+        <put-attribute name="body" value="/WEB-INF/views/nonattendances/create.jspx"/>
+    </definition>
+<definition extends="default" name="nonattendances/update">
+        <put-attribute name="body" value="/WEB-INF/views/nonattendances/update.jspx"/>
+    </definition>
+</tiles-definitions>

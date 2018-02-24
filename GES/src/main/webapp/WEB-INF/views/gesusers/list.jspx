@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_GesUser" items="${gesusers}" z="N109uRlOKELp+MFHRefo8GTyCsQ=">
+        <table:table data="${gesusers}" id="l_com_ges_domain_GesUser" path="/gesusers" z="kM029YWg2sVB4r1m1O0AZpmojFc=">
+            <table:column id="c_com_ges_domain_GesUser_username" property="username" z="ThD5xwTph3jbSivZgGng7ps7oz8="/>
+            <table:column id="c_com_ges_domain_GesUser_password" property="password" z="n1Lyliq3p8HcuI7/H5wz7jP2Vpo="/>
+            <table:column id="c_com_ges_domain_GesUser_enabled" property="enabled" z="7WvwGqm6MDhjZUQKXA/DF67ryFs="/>
+            <table:column id="c_com_ges_domain_GesUser_profiles" property="profiles" z="LvY6kJ2m0uqFV6LKE1zttUBTEQ8="/>
+        </table:table>
+    </page:list>
+</div>

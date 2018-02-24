@@ -1,0 +1,22 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+
+  <jsp:output omit-xml-declaration="yes" />
+
+  <spring:url value="/resources/scripts/bootstrap.js" var="bootstrap_js" />
+  <spring:url value="/resources/scripts/dataTables.bootstrap.js" var="dataTables_bootstrap_js" />
+  <spring:url value="/resources/scripts/dataTables.responsive.js" var="dataTables_responsive_js" />
+  <spring:url value="/resources/scripts/jquery.dataTables.js" var="jquery_dataTables_js" />
+  <spring:url value="/resources/scripts/jquery.js" var="jquery_js" />
+  <spring:url value="/resources/scripts/metisMenu.js" var="metisMenu_js" />
+  <spring:url value="/resources/scripts/sb-admin-2.js" var="sb_admin_2_js" />
+  
+  <script src="${jquery_js}"><!-- comment --></script>
+  <script src="${bootstrap_js}"><!-- comment --></script>
+  <script src="${metisMenu_js}"><!-- comment --></script>
+  <script src="${jquery_dataTables_js}"><!-- comment --></script>
+  <script src="${dataTables_bootstrap_js}"><!-- comment --></script>
+  <script src="${dataTables_responsive_js}"><!-- comment --></script>
+  <script src="${sb_admin_2_js}"><!-- comment --></script>
+
+
+</jsp:root>

@@ -1,0 +1,27 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+
+  <jsp:output omit-xml-declaration="yes" />
+
+  <spring:url value="/resources/images/favicon.ico" var="favicon" />
+  
+  <spring:url value="/resources/styles/bootstrap.css" var="bootstrap_css" />
+  <spring:url value="/resources/styles/bootstrap-social.css" var="bootstrap_social_css" />
+  <spring:url value="/resources/styles/dataTables.bootstrap.css" var="dataTables_bootstrap_css" />
+  <spring:url value="/resources/styles/dataTables.responsive.css" var="dataTables_responsive_css" />
+  <spring:url value="/resources/styles/font-awesome.css" var="font_awesome_css" />
+  <spring:url value="/resources/styles/metisMenu.css" var="metisMenu_css" />
+  <spring:url value="/resources/styles/sb-admin-2.css" var="sb_admin_2_css" />
+  
+  
+  <link rel="SHORTCUT ICON" href="${favicon}"/>
+  
+  <link href="${bootstrap_css}" rel="stylesheet" type="text/css"/>
+  <link href="${bootstrap_social_css}" rel="stylesheet" type="text/css"/>
+  <link href="${metisMenu_css}" rel="stylesheet" type="text/css"/>
+  <link href="${dataTables_bootstrap_css}" rel="stylesheet" type="text/css"/>
+  <link href="${dataTables_responsive_css}" rel="stylesheet" type="text/css"/>
+  <link href="${sb_admin_2_css}" rel="stylesheet" type="text/css"/>
+  <link href="${font_awesome_css}" rel="stylesheet" type="text/css"/>
+
+
+</jsp:root>

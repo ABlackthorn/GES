@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_ges_domain_NonAttendance" object="${nonattendance}" path="/nonattendances" z="ekqf3cTWaHiXWthY6+M8XwRIIto=">
+        <field:display field="student" id="s_com_ges_domain_NonAttendance_student" object="${nonattendance}" z="UJrUlANKU9/gM5Tq5c/30Oj3hFo="/>
+        <field:display calendar="true" dateTimePattern="${nonAttendance_nadate_date_format}" field="naDate" id="s_com_ges_domain_NonAttendance_naDate" object="${nonattendance}" z="hKCrYRb2DkpyvDkd3VgnctSWozo="/>
+        <field:display field="subject" id="s_com_ges_domain_NonAttendance_subject" object="${nonattendance}" z="S6hG22G8cYC0HAnXJYKHIX/1fPo="/>
+        <field:display field="justified" id="s_com_ges_domain_NonAttendance_justified" object="${nonattendance}" z="/xWrMpCatIkiWkXIRHKI4kFtD9c="/>
+        <field:display field="reason" id="s_com_ges_domain_NonAttendance_reason" object="${nonattendance}" z="/8pKEI2SEcFL4dN2IO4z21wFMLQ="/>
+    </page:show>
+</div>

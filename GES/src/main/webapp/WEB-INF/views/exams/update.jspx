@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_ges_domain_Exam" modelAttribute="exam" path="/exams" versionField="none" z="qn+wWlPPtksuFkn26Ae7MDAwhjQ=">
+        <field:select field="subject" id="c_com_ges_domain_Exam_subject" itemValue="id" items="${subjects}" path="/subjects" z="xNhHT0Hbq/MX2mbnBQd9dI0udY8="/>
+        <field:select field="students" id="c_com_ges_domain_Exam_students" itemValue="id" items="${students}" multiple="true" path="/students" z="R4TrJKoCfKqvNVTFGZ4RjZJGTs4="/>
+        <field:datetime dateTimePattern="${exam_examdate_date_format}" field="examDate" id="c_com_ges_domain_Exam_examDate" z="5n/2tLKuJ7llzzxxnHj1kXKnVUY="/>
+        <field:select field="grade" id="c_com_ges_domain_Exam_grade" itemValue="id" items="${grades}" path="/grades" z="PI9m8Ng9zvDxJ43EOvtD1riTBdY="/>
+    </form:update>
+</div>

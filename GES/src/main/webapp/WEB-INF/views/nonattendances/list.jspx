@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_NonAttendance" items="${nonattendances}" z="SfqPpO0EaDgnT3DTzi35s2+sbgg=">
+        <table:table data="${nonattendances}" id="l_com_ges_domain_NonAttendance" path="/nonattendances" z="MZkRRblFswGooB98yW2NDFjEv4U=">
+            <table:column id="c_com_ges_domain_NonAttendance_student" property="student" z="HKamZOUmqisiBUnmyQIzA8MLpw4="/>
+            <table:column calendar="true" dateTimePattern="${nonAttendance_nadate_date_format}" id="c_com_ges_domain_NonAttendance_naDate" property="naDate" z="xkOA/q0NwOjmk+D33TQV9RjbC2g="/>
+            <table:column id="c_com_ges_domain_NonAttendance_subject" property="subject" z="wrNDO3XYwzAJ9aiUw4ND0rmUp1A="/>
+            <table:column id="c_com_ges_domain_NonAttendance_justified" property="justified" z="yg2BqK0Dh9VyeL1dyd2C511R64Y="/>
+            <table:column id="c_com_ges_domain_NonAttendance_reason" property="reason" z="Kw0g8UGTnGa1/W92qERPX2/KtHw="/>
+        </table:table>
+    </page:list>
+</div>

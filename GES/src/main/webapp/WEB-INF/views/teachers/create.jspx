@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_ges_domain_Teacher" modelAttribute="teacher" path="/teachers" render="${empty dependencies}" z="mModbIRBwzK3Pamc8oEbsCap27o=">
+        <field:select field="gesUser" id="c_com_ges_domain_Teacher_gesUser" itemValue="id" items="${gesusers}" path="/gesusers" required="true" z="50IYC7gWShtBsNG9TVruw6wt5u8="/>
+        <field:input field="lastName" id="c_com_ges_domain_Teacher_lastName" z="cS3norg1gm2uOHDBhIHB8/PZeo4="/>
+        <field:input field="firstName" id="c_com_ges_domain_Teacher_firstName" z="bFLTC8OXSSpvh0lcD2Po7dL1cHU="/>
+        <field:input field="CIN" id="c_com_ges_domain_Teacher_CIN" z="ZW4hjB7Mf/44+PqncHlUBU9Z+LE="/>
+        <field:input field="tel" id="c_com_ges_domain_Teacher_tel" z="Fh5p6ZkOaA3dO/umwJxT4ZO6IGE="/>
+        <field:select field="subjects" id="c_com_ges_domain_Teacher_subjects" itemValue="id" items="${subjects}" multiple="true" path="/subjects" z="pPmoDKs2ZndZhnaQqvFRHd9K/Ro="/>
+        <field:select field="grades" id="c_com_ges_domain_Teacher_grades" itemValue="id" items="${grades}" multiple="true" path="/grades" z="GQybUmspwlQlJZG4zkcWCyfIauo="/>
+        <field:select field="students" id="c_com_ges_domain_Teacher_students" itemValue="id" items="${students}" multiple="true" path="/students" z="CEjd8iwVEXGb30b3F/HxxLWK5HM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_ges_domain_Teacher" render="${not empty dependencies}" z="FWTpioZOjI0HKSjuLpvlAS3pECo="/>
+</div>

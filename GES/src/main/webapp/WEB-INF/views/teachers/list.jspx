@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_Teacher" items="${teachers}" z="RCwhlasc0V/nUPIvB7uc+69vf5c=">
+        <table:table data="${teachers}" id="l_com_ges_domain_Teacher" path="/teachers" z="PHQdHeM8dGMnSzPQwNUQuuIMG6w=">
+            <table:column id="c_com_ges_domain_Teacher_gesUser" property="gesUser" z="EAkYY2DcosE4PeIXYyy8jhHgjsA="/>
+            <table:column id="c_com_ges_domain_Teacher_lastName" property="lastName" z="nU4HlE5/yt0t9mIdGgVdWj9QwCo="/>
+            <table:column id="c_com_ges_domain_Teacher_firstName" property="firstName" z="yDcBIosMfnnYO7MomlwUXHGk4W0="/>
+            <table:column id="c_com_ges_domain_Teacher_CIN" property="CIN" z="h6EJRS+Mv0Rm/H3zZjFDBP4O3DQ="/>
+            <table:column id="c_com_ges_domain_Teacher_tel" property="tel" z="u0NfeW4T9dDvNpfcAU/5khD+0cY="/>
+            <table:column id="c_com_ges_domain_Teacher_subjects" property="subjects" z="Rgz2IncXHfColjjoG6N69w1b4D0="/>
+        </table:table>
+    </page:list>
+</div>

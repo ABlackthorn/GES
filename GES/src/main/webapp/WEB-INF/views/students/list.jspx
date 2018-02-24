@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_Student" items="${students}" z="OjlRCtDBZZB+In5NQvtMFOizI3E=">
+        <table:table data="${students}" id="l_com_ges_domain_Student" path="/students" z="Ul7Fwhwf5PLdTyZY7+1y8oVIKcU=">
+            <table:column id="c_com_ges_domain_Student_gesUser" property="gesUser" z="fSja+++TBahUfbenKiRxjc5AsNI="/>
+            <table:column id="c_com_ges_domain_Student_lastName" property="lastName" z="PkuH58AkElbgGeE9fhy61kf/jjk="/>
+            <table:column id="c_com_ges_domain_Student_firstName" property="firstName" z="iRhX/6mDv7VzAcNc6mhf4lcvatE="/>
+            <table:column id="c_com_ges_domain_Student_tel" property="tel" z="r8aBhTGATwYxnmonibgz3WhcWJc="/>
+            <table:column id="c_com_ges_domain_Student_grade" property="grade" z="8MS9Ik0oU/Js2WvlgR8J1wdDsto="/>
+            <table:column id="c_com_ges_domain_Student_schoolMonths" property="schoolMonths" z="rVOjewqFez0MYVTYeQ4AFZx0VAY="/>
+        </table:table>
+    </page:list>
+</div>

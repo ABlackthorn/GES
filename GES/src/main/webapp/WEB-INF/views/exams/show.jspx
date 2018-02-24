@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_ges_domain_Exam" object="${exam}" path="/exams" z="OaC9aCgGgvCrCeraVQaXawDuwF4=">
+        <field:display field="subject" id="s_com_ges_domain_Exam_subject" object="${exam}" z="iNFZJWp3IqYp/vOKMLAcc8VGEL0="/>
+        <field:display field="students" id="s_com_ges_domain_Exam_students" object="${exam}" z="hXW3647OYZhPOJJXpiY7d+EDNzk="/>
+        <field:display calendar="true" dateTimePattern="${exam_examdate_date_format}" field="examDate" id="s_com_ges_domain_Exam_examDate" object="${exam}" z="kq2C+4G7JJw5gpMDYyrHEssIP7c="/>
+        <field:display field="grade" id="s_com_ges_domain_Exam_grade" object="${exam}" z="yurPj0bVBHNvC/4s5i/Ktijro4c="/>
+    </page:show>
+</div>

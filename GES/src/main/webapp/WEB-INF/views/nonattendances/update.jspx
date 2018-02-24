@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_ges_domain_NonAttendance" modelAttribute="nonAttendance" path="/nonattendances" versionField="none" z="/+BUT0QXbxmFU3l+cpBpXW6L+10=">
+        <field:select field="student" id="c_com_ges_domain_NonAttendance_student" itemValue="id" items="${students}" path="/students" z="OYpRvGPvOalrVGeeu3GHBKfO4+I="/>
+        <field:datetime dateTimePattern="${nonAttendance_nadate_date_format}" field="naDate" id="c_com_ges_domain_NonAttendance_naDate" z="7aZa2aRj7iNCK8AuBzP4B8kABKk="/>
+        <field:select field="subject" id="c_com_ges_domain_NonAttendance_subject" itemValue="id" items="${subjects}" path="/subjects" z="1knRK/o0FoKRS1rEgcHQ6D07D7s="/>
+        <field:checkbox field="justified" id="c_com_ges_domain_NonAttendance_justified" z="xr9bG0N3b9YDxReF7mLW7PAT/uY="/>
+        <field:input field="reason" id="c_com_ges_domain_NonAttendance_reason" z="B+OTCM6btgrjzNgvcDY5V4eal/Y="/>
+    </form:update>
+</div>

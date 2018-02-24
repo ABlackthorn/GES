@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_ges_domain_SchoolMonth" items="${schoolmonths}" z="K/TSC4pLJKZAY7VJNM27Ym6l0e0=">
+        <table:table data="${schoolmonths}" id="l_com_ges_domain_SchoolMonth" path="/schoolmonths" z="49/Nn7+8Hi9KbcOXlnKIQPTo+4U=">
+            <table:column id="c_com_ges_domain_SchoolMonth_name" property="name" z="818mL4T2ZYN/d5mO9r/t6vITX+w="/>
+            <table:column id="c_com_ges_domain_SchoolMonth_paid" property="paid" z="gvNPwB79OkS/GZp7bUfC8d4GT1s="/>
+        </table:table>
+    </page:list>
+</div>

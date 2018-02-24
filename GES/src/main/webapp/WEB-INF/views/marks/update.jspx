@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_ges_domain_Mark" modelAttribute="mark" path="/marks" versionField="none" z="ykhYiMyKHamnuNwT3LjY4fcETIY=">
+        <field:input field="mark" id="c_com_ges_domain_Mark_mark" z="lvuuWAQQExoPoJBLrFVy/ldFKlw="/>
+        <field:select field="student" id="c_com_ges_domain_Mark_student" itemValue="id" items="${students}" path="/students" z="9hbm8oYdzQuzb3PIA44rRik591o="/>
+        <field:select field="exam" id="c_com_ges_domain_Mark_exam" itemValue="id" items="${exams}" path="/exams" z="QRM25trrL0lGu4bAi5JfKaeNTPA="/>
+    </form:update>
+</div>
