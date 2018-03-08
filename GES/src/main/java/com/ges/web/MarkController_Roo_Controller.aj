@@ -4,12 +4,20 @@
 package com.ges.web;
 
 import com.ges.domain.Exam;
+import com.ges.domain.GesUser;
 import com.ges.domain.Mark;
 import com.ges.domain.Student;
 import com.ges.web.MarkController;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,16 +55,25 @@ privileged aspect MarkController_Roo_Controller {
     
     @RequestMapping(produces = "text/html")
     public String MarkController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, @RequestParam(value = "sortFieldName", required = false) String sortFieldName, @RequestParam(value = "sortOrder", required = false) String sortOrder, Model uiModel) {
-        if (page != null || size != null) {
-            int sizeNo = size == null ? 10 : size.intValue();
-            final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
-            uiModel.addAttribute("marks", Mark.findMarkEntries(firstResult, sizeNo, sortFieldName, sortOrder));
-            float nrOfPages = (float) Mark.countMarks() / sizeNo;
-            uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
-        } else {
-            uiModel.addAttribute("marks", Mark.findAllMarks(sortFieldName, sortOrder));
-        }
-        return "marks/list";
+    	Authentication currentUser = SecurityContextHolder.getContext().getAuthentication();
+//    	if(currentUser.getAuthorities().stream().anyMatch(r -> r.getAuthority().equals("ROLE_STUDENT"))) {
+		if(currentUser.getAuthorities().stream().anyMatch(new Predicate<GrantedAuthority>() {
+															public boolean test(GrantedAuthority r) {
+																return r.getAuthority().equals("ROLE_STUDENT");
+															}
+			})) {
+    		String currentUserName = currentUser.getName();
+    		System.out.println(currentUserName);
+    		Student currentStudent = Student.findStudentByUsername(currentUserName);
+    		if(currentStudent != null) {
+    			uiModel.addAttribute("marks", Mark.findMarkByStudent(currentStudent));
+    		}else {
+    			uiModel.addAttribute("marks", new ArrayList<Mark>());
+    		}
+    		return "marks/list";
+    	}
+    	// TO-DO : other cases (teacher, staff, admin, etc...)
+    	return null;
     }
     
     @RequestMapping(method = RequestMethod.PUT, produces = "text/html")

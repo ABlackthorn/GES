@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_teacher" z="LDHalaWcu+4uB1/Yp2U+qmXGmfE=">
+    
+		<!--<sec:authorize access="hasRole('ROLE_STUDENT')">
+ 			<li>
+ 				<a href="/GES/notes"><i class="fa fa-dashboard fa-fw">--><!-- comment --><!--</i> Notes</a>
+ 			</li>
+ 			<li>
+ 				Absences
+ 			</li>
+ 			<li>
+ 				Avertissements
+ 			</li>
+		</sec:authorize>-->
+    
+        <!--<menu:category id="c_teacher" z="LDHalaWcu+4uB1/Yp2U+qmXGmfE=">
             <menu:item id="i_teacher_new" messageCode="global_menu_new" url="/teachers?form" z="mlYI9sXVCvEJatzE6XYulrmxPjA="/>
             <menu:item id="i_teacher_list" messageCode="global_menu_list" url="/teachers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qck+mw1AUxmT+v1gCnHL2kVUn3k="/>
         </menu:category>
@@ -54,6 +67,6 @@
         <menu:category id="c_exam" z="nFJVnlJsoldLR4kFzG9WVMjmQDw=">
             <menu:item id="i_exam_new" messageCode="global_menu_new" url="/exams?form" z="0QhVf7YPIf9lJUZVN3F9x/H09oM="/>
             <menu:item id="i_exam_list" messageCode="global_menu_list" url="/exams?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oS/tqyZMsdzAD4hyTzqbQE3v0h0="/>
-        </menu:category>
+        </menu:category>-->
     </menu:menu>
 </div>

@@ -7,6 +7,8 @@ import com.ges.domain.Mark;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Mark_Roo_Jpa_ActiveRecord {
@@ -59,6 +61,12 @@ privileged aspect Mark_Roo_Jpa_ActiveRecord {
             }
         }
         return entityManager().createQuery(jpaQuery, Mark.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<Mark> Mark.findMarkByStudent(Student student){
+    	TypedQuery<Mark> query = entityManager().createQuery("SELECT o FROM Mark o WHERE o.student = :u", Mark.class);
+    	query.setParameter("u", student);
+    	return query.getResultList();
     }
     
     @Transactional

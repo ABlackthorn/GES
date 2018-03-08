@@ -7,6 +7,8 @@ import com.ges.domain.Student;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Student_Roo_Jpa_ActiveRecord {
@@ -44,6 +46,15 @@ privileged aspect Student_Roo_Jpa_ActiveRecord {
     public static Student Student.findStudent(Long id) {
         if (id == null) return null;
         return entityManager().find(Student.class, id);
+    }
+    
+    public static Student Student.findStudentByUsername(String username){
+    	TypedQuery<Student> query = entityManager().createQuery("SELECT o FROM Student o WHERE o.gesUser.username = :u", Student.class);
+    	query.setParameter("u", username);
+    	if(query.getResultList().size() > 0)
+    		return query.getSingleResult();
+    	else
+    		return null;
     }
     
     public static List<Student> Student.findStudentEntries(int firstResult, int maxResults) {
