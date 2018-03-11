@@ -6,13 +6,13 @@
     
 		<sec:authorize access="hasRole('ROLE_STUDENT')">
  			<li>
- 				<a href="/GES/notes"><i class="fa fa-dashboard fa-fw"><!-- comment --></i> Notes</a>
+ 				<a href="/GES/marks"><i class="fa fa-file-text-o fa-fw"><!-- comment --></i> Notes</a>
  			</li>
  			<li>
- 				Absences
+ 				<a href="/GES/nonattendances"><i class="fa fa-calendar fa-fw"><!-- comment --></i> Absences</a>
  			</li>
  			<li>
- 				Avertissements
+ 				<a href="/GES/warnings"><i class="fa fa-warning fa-fw"><!-- comment --></i> Avertissements</a>
  			</li>
 		</sec:authorize>
     

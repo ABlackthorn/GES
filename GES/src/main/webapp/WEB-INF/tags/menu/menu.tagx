@@ -6,7 +6,7 @@
 	<jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)"/>
 	
 	<c:if test="${empty render or render}">
-		<div class="navbar-default sidebar" role="navigation">
+		<div class="navbar-default sidebar" role="navigation" style="margin-top: 0px;">
 			<div class="sidebar-nav navbar-collapse">
 				<ul class="nav" id="${fn:escapeXml(id)}">
 					<jsp:doBody />
