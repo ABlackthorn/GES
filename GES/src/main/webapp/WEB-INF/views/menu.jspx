@@ -12,7 +12,7 @@
  				<a href="/GES/nonattendances"><i class="fa fa-calendar fa-fw"><!-- comment --></i> Absences</a>
  			</li>
  			<li>
- 				<a href="/GES/warnings"><i class="fa fa-warning fa-fw"><!-- comment --></i> Avertissements</a>
+ 				<a href="/GES/notices"><i class="fa fa-warning fa-fw"><!-- comment --></i> Avertissements</a>
  			</li>
 		</sec:authorize>
     
